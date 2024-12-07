@@ -1,0 +1,37 @@
+<FarmerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [10, 10, 10, 10]
+        spacing: 10
+
+        TextInput:
+            id: product_name_input
+            hint_text: 'Product Name'
+            size_hint_y: None
+            height: 30
+
+        TextInput:
+            id: product_description_input
+            hint_text: 'Product Description'
+            size_hint_y: None
+            height: 100
+            multiline: True
+
+        TextInput:
+            id: product_price_input
+            hint_text: 'Product Price'
+            size_hint_y: None
+            height: 30
+
+        Button:
+            text: 'Upload Image'
+            on_press: root.upload_image(self)
+
+        Image:
+            id: image_display
+            size_hint_y: None
+            height: 200
+
+        Button:
+            text: 'Save Product'
+            on_press: root.save_product(self)
